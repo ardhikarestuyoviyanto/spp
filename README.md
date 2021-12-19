@@ -8,3 +8,7 @@
 7. copaskan isi file .env.example ke file .env
 8. didalam project yang tadi (spp) Jalankan aplikasi dengan perintah php spark serve (pakai cmd)
 9. akses di browser localhost:8080 
+
+STRUKTUR PROJECT
+
+![Capture](https://user-images.githubusercontent.com/61740978/146667940-8f4b8bbf-9a58-4e76-93d5-43f934fef727.PNG)
