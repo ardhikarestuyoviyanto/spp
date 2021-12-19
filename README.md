@@ -11,4 +11,4 @@
 
 STRUKTUR PROJECT
 
-![Capture](https://user-images.githubusercontent.com/61740978/146667940-8f4b8bbf-9a58-4e76-93d5-43f934fef727.PNG)
+![Capture](https://user-images.githubusercontent.com/61740978/146667969-efe48dcf-8984-4cf8-9636-9bde3fd6ce14.PNG)
