@@ -22,7 +22,8 @@ STRUKTUR PROJECT
 4. di file .env settingkan konfigurasi sesuai Access Key anda di midtrans, seperti gambar dibawah :
 ![3](https://user-images.githubusercontent.com/61740978/147083349-4b8418d1-b6a8-4888-a126-acecbf8da4c7.PNG)
 
-MIDTRANS_MERCH_ID='ISI SESUAI DI MIDTRANS'<br>
-MIDTRANS_CLIENT_KEY='ISI SESUAI DI MIDTRANS'<br>
-MIDTRANS_SERVER_KEY='ISI SESUAI DI MIDTRANS'<br>
+<code>MIDTRANS_MERCH_ID='ISI SESUAI DI MIDTRANS'</code><br>
+<code>MIDTRANS_CLIENT_KEY='ISI SESUAI DI MIDTRANS'</code><br>
+<code>MIDTRANS_SERVER_KEY='ISI SESUAI DI MIDTRANS'</code><br>
+
 
