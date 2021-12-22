@@ -20,8 +20,7 @@ STRUKTUR PROJECT
 3. Masuk ke menu Setting -> Access Key (di laman dashboard midtrans) seperti gambar dibawah :
 ![6](https://user-images.githubusercontent.com/61740978/147088807-830e3567-0c66-46fd-8357-ef33abded073.png)
 5. di file .env settingkan konfigurasi sesuai Access Key anda di midtrans, seperti gambar dibawah :
-![5](https://user-images.githubusercontent.com/61740978/147088414-74d3e41c-f2a0-4d53-a0ea-ff39260ec075.PNG)
-
+![6](https://user-images.githubusercontent.com/61740978/147089080-32701141-f558-4065-9cd1-a194322755d3.png)
 
 <code>MIDTRANS_MERCH_ID='ISI SESUAI DI MIDTRANS'</code><br>
 <code>MIDTRANS_CLIENT_KEY='ISI SESUAI DI MIDTRANS'</code><br>
