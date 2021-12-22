@@ -79,6 +79,7 @@
                     <th scope="col">Total Tagihan</th>
                     <th scope="col">Dibayar</th>
                     <th scope="col">Status</th>
+                    <th scope="col" >Bayar</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -97,7 +98,9 @@
                     <?php }else{ ?>
                       <td><span class="badge badge-warning">Belum Lengkap</span></td>
                     <?php } ?>
-                    
+                    <td>
+                        <a href="<?= base_url('siswa/detailbulanan/'.$x['id_tagihan']) ?>" class="btn btn-primary btn-xs btn-block" title="Detail Pembayaran">Detail</a>
+                    </td>
                   </tr>
                   <?php endforeach; ?>
                   <?php endif; ?>
@@ -125,6 +128,7 @@
                     <th scope="col">Total Tagihan</th>
                     <th scope="col">Dibayar</th>
                     <th scope="col">Status</th>
+                    <th scope="col" >Bayar</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -142,7 +146,12 @@
                     <?php }else{ ?>
                       <td><span class="badge badge-warning">Belum Lengkap</span></td>
                     <?php } ?>
-                    
+                    <?php if($x->total_bayar != $x->total_tagihan): ?>
+                      <td>
+                        <a href="#" type="button" class="btn btn-primary btn-xs btn-block bayar-bebas" title="Bayar" data-id="<?= $x->id_tagihan; ?>">Bayar</a>
+                      </td>
+                    <?php else: echo "<td>-</td>"; endif; ?>
+
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
@@ -154,4 +163,51 @@
       </div>
     </section>
   </div>
+
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="<?= $client_key; ?>"></script>
+<script>
+$(document).ready(function(){
+    //-----------------------------------------------------
+    $('[data-toggle="tooltip"]').tooltip();
+    //--------------------------------------------------------
+    $('.bayar-bebas').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "<?= base_url('siswa/bayarbebas') ?>",
+            type: "POST",
+            data: {'id_tagihan': $(this).data('id')},
+            success: function(data){
+                var data = JSON.parse(data);
+                snap.pay(data.snap_token, {
+                    onSuccess: function(result){
+                      $.ajax({
+                          url: '<?= base_url('siswa/bayarbebas_update'); ?>',
+                          type: 'POST',
+                          data: {'id_tagihan': $(this).data('id')},
+                          success: function(data){
+                            swal(data)
+                            .then((result) => {
+                                location.reload();
+                            });
+                          }
+                      });
+                    },
+                    onPending: function(result){
+
+                    },
+                    onError: function(result){
+                       console.log('Error : '+JSON.stringify(result, null, 2));
+                    }
+                });
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
+
+
+    });
+});
+</script>
+
 <?= $this->endSection('content'); ?>

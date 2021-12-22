@@ -1192,5 +1192,35 @@ class ModelAdmin extends Model{
         return $build->get();
     }
 
+    // Get Total Bayar bayar 
+
+    public function getTotalDibayarTagihanBebas($id_tagihan){
+        $build = $this->db->table('transaksi_bebas')
+                ->where('id_tagihan', $id_tagihan)
+                ->get();
+
+        $sisa = 0;
+        foreach($build->getResult() as $x): 
+            $sisa = $sisa + $x->total_bayar;
+        endforeach; 
+
+        return $sisa;
+    }
+
+    public function getTotalDibayarPerBulan($id_tagihan, $bulan, $total_tagihan){
+        $build = $this->db->table('transaksi_bulanan')
+                ->where('id_tagihan', $id_tagihan)
+                ->where('bulan', $bulan)
+                ->where('total_bayar', $total_tagihan)
+                ->get();
+
+        $sisa = 0;
+        foreach($build->getResult() as $x): 
+            $sisa = $sisa + $x->total_bayar;
+        endforeach; 
+
+        return $sisa;
+    }
+
 }
 ?>

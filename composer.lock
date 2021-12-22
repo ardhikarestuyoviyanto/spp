@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58f479e3f0629cb4626c15a88f9d349c",
+    "content-hash": "fe6030ccea003517a18225fc982dda6c",
     "packages": [
         {
             "name": "kint-php/kint",
@@ -245,6 +245,60 @@
                 "source": "https://github.com/twilio/twilio-php/tree/6.32.0"
             },
             "time": "2021-12-15T20:48:09+00:00"
+        },
+        {
+            "name": "veritrans/veritrans-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/veritrans/veritrans-php.git",
+                "reference": "9819ee6da7cf38ee3447b43f08276f4e4fa51808"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/veritrans/veritrans-php/zipball/9819ee6da7cf38ee3447b43f08276f4e4fa51808",
+                "reference": "9819ee6da7cf38ee3447b43f08276f4e4fa51808",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*",
+                "psy/psysh": "0.4.*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andri Setiawan",
+                    "email": "andri.setiawan@veritrans.co.id"
+                },
+                {
+                    "name": "Alvin Litani",
+                    "email": "alvin.litani@veritrans.co.id"
+                },
+                {
+                    "name": "Ismail Faruqi",
+                    "email": "ismail.faruqi@veritrans.co.id"
+                }
+            ],
+            "description": "PHP Wraper for Veritrans VT-Web Payment API.",
+            "homepage": "https://midtrans.com",
+            "support": {
+                "issues": "https://github.com/veritrans/veritrans-php/issues",
+                "source": "https://github.com/veritrans/veritrans-php/tree/master"
+            },
+            "time": "2019-09-30T07:41:49+00:00"
         }
     ],
     "packages-dev": [
@@ -2742,7 +2796,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "veritrans/veritrans-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

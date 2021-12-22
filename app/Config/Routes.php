@@ -83,7 +83,6 @@ $routes->group('admin', function($routes){
 	$routes->get('rekap', 'Admin::rekap', ['filter'=>'auth']);
 	
 	$routes->get('rekapdetail', 'Admin::rekapdetail', ['filter'=>'auth']);
-	$routes->get('lapwalikelas', 'Admin::lapwalikelas', ['filter'=>'auth']);
 	$routes->get('kartutag', 'Admin::kartutag', ['filter'=>'auth']);
 	$routes->get('pemasukan', 'Admin::pemasukan', ['filter'=>'auth']);
 
@@ -97,6 +96,13 @@ $routes->group('admin', function($routes){
 $routes->group('siswa', function($routes){
 	$routes->get('home', 'Siswa::home', ['filter'=>'authsiswa']);
 	$routes->get('tagihan', 'Siswa::tagihan', ['filter'=>'authsiswa']);
+	//----------------------------------------------------------------
+	$routes->post('bayarbebas', 'Midtrans::getsnaptokenTagihanBebas', ['filter'=>'authsiswa']);
+	$routes->post('bayarbulanan', 'Midtrans::getsnaptokenTagihanBulanan', ['filter'=>'authsiswa']);
+	//---------------------------------------------------------------------------------------------
+	$routes->post('bayarbulanan_update', 'Midtrans::tagihanbulananupdate', ['filter'=>'authsiswa']);
+	$routes->post('bayarbebas_update', 'Midtrans::tagihanbebasupdate', ['filter'=>'authsiswa']);
+	$routes->get('detailbulanan/(:any)', 'Siswa::detailtagihanbulanan', ['filter'=>'authsiswa']);
 });
 //--------------------------------------------------------------
 $routes->group('export', function($routes){

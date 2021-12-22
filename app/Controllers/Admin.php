@@ -3,6 +3,7 @@ namespace App\Controllers;
 use App\Models\ModelAdmin;
 use Twilio\Rest\Client;
 use App\Models\ModelManajemen;
+use Exception;
 
 class Admin extends BaseController{
 
@@ -1895,28 +1896,38 @@ class Admin extends BaseController{
         require_once(APPPATH.'Libraries/Twillo/twilio/autoload.php');
 
         $build = new ModelManajemen();
-    
-        foreach ($build->getSekolah()->getResult() as $x){
 
-            $sid = $x->sid_twilo; 
-            $token = $x->token_twilo;
-            $no_hp = $x->number_twilo;
-            $nama_sekolah = $x->nama_sekolah;
+        try{
+
+            foreach ($build->getSekolah()->getResult() as $x){
+
+                $sid = $x->sid_twilo; 
+                $token = $x->token_twilo;
+                $no_hp = $x->number_twilo;
+                $nama_sekolah = $x->nama_sekolah;
+            }
+    
+            $client = new Client($sid, $token);
+    
+            $message = $client->messages->create(
+              $this->hp($_GET['no_hp']), 
+              [
+                'from' => $no_hp, 
+                'body' => 'Hallo Segera Lunasi Pembayaran '.$_GET['nama_tagihan'].' Sebesar (Rp. '.$_GET['total_tagihan'].'), Terimakasih Keuangan '.$nama_sekolah
+              ]
+            );
+    
+            $message->sid;
+    
+            return redirect('admin/pembayaran');
+
+
+        }catch(Exception $e){
+
+            dd($e->getMessage());
+
         }
 
-        $client = new Client($sid, $token);
-
-        $message = $client->messages->create(
-          $this->hp($_GET['no_hp']), 
-          [
-            'from' => $no_hp, 
-            'body' => 'Hallo Segera Lunasi Pembayaran '.$_GET['nama_tagihan'].' Sebesar (Rp. '.$_GET['total_tagihan'].'), Terimakasih Keuangan '.$nama_sekolah
-          ]
-        );
-
-        $message->sid;
-
-        return redirect('admin/pembayaran');
         
     }
 

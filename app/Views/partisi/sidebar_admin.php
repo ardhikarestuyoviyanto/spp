@@ -218,19 +218,6 @@
 
               <ul class="nav nav-treeview">
                   <li class="nav-item">
-                  <?php if($sidebar == "LapWali"){ ?>
-                      <a href="<?php echo base_url('admin/lapwalikelas') ?>" class="nav-link active">
-                  <?php }else{ ?>
-                      <a href="<?php echo base_url('admin/lapwalikelas') ?>" class="nav-link">
-                  <?php } ?>
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Lap. Wali. Kelas</p>
-                  </a>
-                  </li>
-              </ul>
-
-              <ul class="nav nav-treeview">
-                  <li class="nav-item">
                   <?php if($sidebar == "kartutag"){ ?>
                       <a href="<?php echo base_url('admin/kartutag') ?>" class="nav-link active">
                   <?php }else{ ?>
