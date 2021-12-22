@@ -18,9 +18,10 @@ STRUKTUR PROJECT
 2. Setelah daftar, dibagian sidebar midtrans atur enviroment nya menjadi SANDBOX, seperti gambar dibawah
 ![1](https://user-images.githubusercontent.com/61740978/147081798-10f80f80-54d0-44d1-be1f-3ea92c8d17d7.PNG)
 3. Masuk ke menu Setting -> Access Key (di laman dashboard midtrans) seperti gambar dibawah :
-![2](https://user-images.githubusercontent.com/61740978/147083141-ff637bef-d615-444b-94b1-660071aa621e.png)
-4. di file .env settingkan konfigurasi sesuai Access Key anda di midtrans, seperti gambar dibawah :
-![3](https://user-images.githubusercontent.com/61740978/147083349-4b8418d1-b6a8-4888-a126-acecbf8da4c7.PNG)
+![6](https://user-images.githubusercontent.com/61740978/147088807-830e3567-0c66-46fd-8357-ef33abded073.png)
+5. di file .env settingkan konfigurasi sesuai Access Key anda di midtrans, seperti gambar dibawah :
+![5](https://user-images.githubusercontent.com/61740978/147088414-74d3e41c-f2a0-4d53-a0ea-ff39260ec075.PNG)
+
 
 <code>MIDTRANS_MERCH_ID='ISI SESUAI DI MIDTRANS'</code><br>
 <code>MIDTRANS_CLIENT_KEY='ISI SESUAI DI MIDTRANS'</code><br>
