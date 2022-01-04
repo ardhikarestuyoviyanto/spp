@@ -16,14 +16,14 @@
 }
 </style>
 <?php use App\Models\ModelAdmin; $modelss = new ModelAdmin();?>
-<body class="hold-transition sidebar-collapse layout-top-nav" style="background-color:#0a240a;">
+<body class="hold-transition sidebar-collapse layout-top-nav">
 <div class="wrapper" >
 
-  <nav class="main-header navbar navbar-expand-md fixed-top" style="background-color:#051702;">
+  <nav class="main-header navbar navbar-expand-md fixed-top bg-dark">
     <div class="container">
       <a href="<?php echo base_url() ?>" class="navbar-brand" style="color:white;">
         <img src="https://www.smkngudo.sch.id/wp-content/uploads/2021/02/logo-smkn-gudo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Smk Percobaan</span>
+        <span class="brand-text font-weight-light">SMKN 96 YOGYAKARTA</span>
       </a>
     </div>
   </nav>
@@ -33,9 +33,9 @@
       <div class="container">
 
         <div class="card mt-3">
-            <div class="card-header bg-success">
+            <div class="card-header bg-primary">
                 Cek Tagihan
-                <a href="<?php echo base_url('/'); ?>" type="button" class="btn btn-sm btn-success active" style="float:right;">Kembali</a>
+                <a href="<?php echo base_url('/'); ?>" type="button" class="btn btn-sm btn-dark active" style="float:right;">Kembali</a>
             </div>
             <div class="card-body">
             <form action="<?php echo base_url('home/carisiswa'); ?>" method="get">
@@ -47,14 +47,14 @@
                         </select>
                     </div>
                     <div class="col-sm-3 mt-2 mb-2">
-                        <button type="submit" class="btn btn-success">Cari Siswa</button>
+                        <button type="submit" class="btn btn-primary">Cari Siswa</button>
                     </div>
                 </div>
             </form>
             </div>
         </div>
 
-        <div class="card card-success">
+        <div class="card card-primary">
             <div class="card-header">
             Informasi Siswa
             <div class="card-tools">
@@ -297,7 +297,7 @@
         </div>
         <br><br><br>
     </div>
-    <footer class="main-footer text-center fixed-bottom" style="background-color:#051702; color:white;">
+    <footer class="main-footer text-center fixed-bottom bg-dark" style="color:white;">
     <strong>Copyright &copy; 2021 Sistem Informasi Pembayaran Sekolah
   </footer>
 </div>
