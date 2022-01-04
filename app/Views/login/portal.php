@@ -1,4 +1,5 @@
 <?php echo $this->include('partisi/head'); ?>
+<?php echo $this->include('partisi/js_login'); ?>
 <!-- FILE CSS -->
 <style>
   .card-login:hover {
@@ -184,8 +185,82 @@
     </footer>
     </div>
 
+  
+    <div class="modal fade" id="infologin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">INFORMASI LOGIN & AUTHOR PROYEK</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> 
+          </div>
+          <div class="modal-body">
 
+          <div class="text-center">
+            <h3>PROJECT APLIKASI INI DISUSUN OLEH</h3>
+            <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row" style="vertical-align : middle;text-align:center;">MANAJER SENIOR</th>
+                <td>
+                  Maulana Muhammad Rafli (5190411352)
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" style="vertical-align : middle;text-align:center;">MANAJER PROYEK</th>
+                <td>
+                  Dewi Nadlirotul Fikriah  (5190411287) <br>
+                  Andi Deby Lalebata Agnas (5190411317)
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" style="vertical-align : middle;text-align:center;">PELAKSANA</th>
+                <td>
+                  Wildan Patrialis Akbar (5190411272) <br>
+                  Tony Prasetyo (5190411273) <br>
+                  Ardhika restu Yoviyanto	(5190411312) <br>
+                  Riski Abiyantoro (5190411359) <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
 
-<?php echo $this->include('partisi/js_login'); ?>
+          <div class="text-center">
+          <h3>DEMO USER LOGIN</h3>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">ADMIN</th>
+                <td class="text-bold">
+                  Username : admin <br>
+                  Password : admin123
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">SISWA</th>
+                <td class="text-bold">
+                  NIS: 123 <br>
+                  Password : 123
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          </div>
+          <div class="card-footer text-center">
+            Rekayasa Web Kelompok 6
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $('#infologin').modal('show')
+      });
+    </script>
+
 </body>
 </html>
