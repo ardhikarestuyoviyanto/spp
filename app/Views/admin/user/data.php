@@ -26,7 +26,7 @@
             <div class="card-body">
 
             <table class="table table-bordered table-striped" id="DataUsers">
-                <thead>
+                <thead class="bg-primary text-white">
                     <tr>
                     <th scope="col">No</th>
                     <th scope="col">Username</th>
