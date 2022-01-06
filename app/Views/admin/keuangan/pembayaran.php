@@ -72,7 +72,7 @@
 
                 <div class="card-body">
                   <table class="table table-bordered table-striped" id="Pos">
-                      <thead>
+                     <thead class="bg-primary text-white">
                               <tr>
                               <th scope="col">No</th>
                               <th scope="col">Nama Pembayaran</th>
